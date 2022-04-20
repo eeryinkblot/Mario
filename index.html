@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mario Charaktere</title>
+    <meta charset="UTF-8" />
+    <style>
+      div.card {
+        border: 1px solid green;
+        height: 250px;
+        width: 350px;
+        display: inline-block;
+        position: relative;
+      }
+
+      p.label {
+         display: block;
+         text-align: center;
+         font-family: 'Verdana';
+      }
+
+      img.image {
+        position: absolute;
+        margin: auto;
+        top: 25px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      const characters = [
+        {
+          name: 'Gumba',
+          link: 'https://static.wikia.nocookie.net/mario/images/b/b3/SM3DW_Artwork_Gumba.png/revision/latest/scale-to-width-down/700?cb=20140610202225&path-prefix=de',
+        },
+        {
+          name: 'Koopa',
+          link: 'https://static.wikia.nocookie.net/mario/images/2/2b/NSMBU_Artwork_Koopa.png/revision/latest/scale-to-width-down/699?cb=20140623174256&path-prefix=de',
+        },
+        {
+          name: 'Para-Koopa',
+          link: 'https://static.wikia.nocookie.net/mario/images/f/f1/NSMBU_Artwork_Parakoopa.png/revision/latest/scale-to-width-down/700?cb=20140810224102&path-prefix=de'
+        },
+        {
+          name: 'Piranha-Pflanze',
+          link: 'https://static.wikia.nocookie.net/mario/images/a/a3/SSBU_Artwork_Piranha-Pflanze.png/revision/latest/scale-to-width-down/700?cb=20211023195659&path-prefix=de',
+        },
+        {
+          name: 'Blooper',
+          link: 'https://static.wikia.nocookie.net/mario/images/6/6e/MPSR_Artwork_Blooper.png/revision/latest/scale-to-width-down/700?cb=20190607155855&path-prefix=de'
+        },
+        {
+          name: 'Cheep-Cheep',
+          link: 'https://static.wikia.nocookie.net/mario/images/1/13/NSMBU_Artwork_Cheep-Cheep.png/revision/latest/scale-to-width-down/700?cb=20190607155321&path-prefix=de'
+        },
+        {
+          name: 'Hammer-Bruder',
+          link: 'https://static.wikia.nocookie.net/mario/images/c/c3/MKT_Artwork_HammerBruder.png/revision/latest/scale-to-width-down/700?cb=20200327121800&path-prefix=de'
+        },
+        {
+          name: 'Bummel-Käfer',
+          link: 'https://static.wikia.nocookie.net/mario/images/1/1b/NSMBU_Artwork_Käfer.png/revision/latest/scale-to-width-down/699?cb=20140809152817&path-prefix=de'
+        },
+        {
+          name: 'Lakitu',
+          link: 'https://static.wikia.nocookie.net/mario/images/d/db/NSMBU_Artwork_Lakitu.png/revision/latest/scale-to-width-down/699?cb=20190607210727&path-prefix=de'
+        },
+        {
+          name: 'Stachi',
+          link: 'https://static.wikia.nocookie.net/mario/images/b/bc/NSMB_Artwork_Stachi.png/revision/latest/scale-to-width-down/699?cb=20190623144518&path-prefix=de'
+        },
+        {
+          name: 'Kugelwilli',
+          link: 'https://static.wikia.nocookie.net/mario/images/5/55/MKDS_Artwork_Kugelwilli.png/revision/latest/scale-to-width-down/699?cb=20140810223141&path-prefix=de'
+        },
+        {
+          name: 'Shy Guy',
+          link: 'https://static.wikia.nocookie.net/mario/images/a/a6/MSS_Artwork_Shy_Guy.png/revision/latest/scale-to-width-down/700?cb=20201007073101&path-prefix=de'
+        },
+        {
+          name: 'Pokey',
+          link: 'https://static.wikia.nocookie.net/mario/images/d/d4/NSMBU_Artwork_Pokey.png/revision/latest/scale-to-width-down/700?cb=20190831192007&path-prefix=de'
+        },
+        {
+          name: 'Bob-Omb',
+          link: 'https://static.wikia.nocookie.net/mario/images/f/f6/MPSR_Artwork_Bob-omb.png/revision/latest/scale-to-width-down/699?cb=20190607155108&path-prefix=de'
+        },
+        {
+          name: 'Buu Huu',
+          link: 'https://static.wikia.nocookie.net/mario/images/d/d9/NSMBU_Artwork_Buu_Huu.png/revision/latest/scale-to-width-down/699?cb=20190625183507&path-prefix=de'
+        },
+        {
+          name: 'Kettenhund',
+          link: 'https://static.wikia.nocookie.net/mario/images/e/e1/MP8_Artwork_Kettenhund.png/revision/latest/scale-to-width-down/699?cb=20190706074545&path-prefix=de'
+        },
+        {
+          name: 'Wiggler',
+          link: 'https://static.wikia.nocookie.net/mario/images/c/c1/MPDS_Artwork_Wiggler.png/revision/latest/scale-to-width-down/700?cb=20140811141636&path-prefix=de'
+        },  
+      ];
+
+      /*
+        {
+          name: '',
+          link: ''
+        },
+      */
+
+      const createCharacter = (character) => {
+        const div = document.createElement('div');
+        div.className = 'card';
+  
+        const label = document.createElement('p');
+        label.className = 'label';
+        label.innerText = character.name;
+        div.appendChild(label);
+
+        const image = document.createElement('img');
+        image.className = 'image';
+        image.src = character.link;
+        div.appendChild(image);
+
+        document.getElementsByTagName('body')[0].appendChild(div);
+      };
+
+      characters.forEach(createCharacter);
+    </script>
+  </body>
+</html>
