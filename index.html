@@ -121,6 +121,7 @@
         const image = document.createElement('img');
         image.className = 'image';
         image.src = character.link;
+        image.crossOrigin = 'anonymous';
         div.appendChild(image);
 
         document.getElementsByTagName('body')[0].appendChild(div);
